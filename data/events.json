@@ -1,0 +1,201 @@
+[
+  {
+    "id": 1,
+    "name": "React Workshop",
+    "date": "2025-07-10",
+    "category": "Workshop",
+    "location": "Online",
+    "Image": "assets/images/react.jpg",
+    "description": "A hands-on workshop to learn React.js from scratch."
+  },
+  {
+    "id": 2,
+    "name": "Startup Meetup",
+    "date": "2025-07-15",
+    "category": "Meetup",
+    "location": "San Francisco",
+    "Image": "assets/images/startupMeet.jpg",
+    "description": "Networking event for startups and entrepreneurs."
+  },
+  {
+    "id": 3,
+    "name": "AI Conference",
+    "date": "2025-08-05",
+    "category": "Conference",
+    "location": "New York",
+    "Image": "assets/images/aiWeb.jpg",
+    "description": "A conference focusing on the latest advancements in AI technology."
+  },
+  {
+    "id": 4,
+    "name": "Web Development Bootcamp",
+    "date": "2025-08-20",
+    "category": "Bootcamp",
+    "location": "Online",
+    "Image": "assets/images/h3ckathon.jpg",
+    "description": "Intensive bootcamp to master web development skills."
+  },
+  {
+    "id": 5,
+    "name": "Tech Talk: Future of Blockchain",
+    "date": "2025-09-10",
+    "category": "Conference",
+    "location": "Los Angeles",
+    "Image": "assets/images/blockchain.jpg",
+    "description": "An insightful talk on the future trends in blockchain technology."
+  },
+  {
+    "id": 6,
+    "name": "Cybersecurity Summit",
+    "date": "2025-09-25",
+    "category": "Meetup",
+    "location": "Chicago",
+    "Image": "assets/images/hthon3.jpg",
+    "description": "A summit discussing the latest in cybersecurity threats and solutions."
+  },
+  {
+    "id": 7,
+    "name": "Data Science Symposium",
+    "date": "2025-10-05",
+    "category": "Bootcamp",
+    "location": "Boston",
+    "Image": "assets/images/dld.jpg",
+    "description": "A symposium on data science innovations and applications."
+  },
+  {
+    "id": 8,
+    "name": "Cloud Computing Expo",
+    "date": "2025-10-20",
+    "category": "Seminar",
+    "location": "Seattle",
+    "Image": "assets/images/eventl.jpg",
+    "description": "An expo showcasing the latest in cloud computing technologies."
+  },
+  {
+    "id": 8,
+    
+    "name": "Tech Meetup",
+    "date": "2025-11-01",
+    "category": "Meetup",
+    "location": "Berlin",
+    "Image": "assets/images/hthon3.jpg",
+    "description": "A meetup for tech enthusiasts to share ideas and network."
+  },
+  {
+    "id": 9,
+   
+    "name":" Web Development Bootcamp",
+    "date": "2025-11-20",
+    "category": "Bootcamp",
+    "location": "Online",
+     "Image": "assets/images/web3.jpg",
+    "description": "An intensive bootcamp to learn web development skills."
+  },
+  {
+    "id": 10,
+    
+    "name": "Cybersecurity Conference",
+    "date": "2025-12-05",
+    "category": "Conference",
+    "location": "London",
+    "Image": "assets/images/dld.jpg",
+    "description": "A conference focusing on the latest trends in cybersecurity."
+  },
+  {
+    "id": 11,
+   
+    "name": "Data Science Seminar",
+    "date": "2025-12-15",
+    "category": "Seminar",
+    "location": "Toronto",
+     "Image": "assets/images/nxt.jpg",
+    "description": "A seminar on data science techniques and applications."
+  },
+  {
+    "id": 12,
+    
+    "name": "Cloud Computing Workshop",
+    "date": "2026-01-10",
+    "category": "Workshop",
+    "location": "Online",
+    "Image": "assets/images/next.jpg",
+    "description": "A workshop on cloud computing technologies and best practices."
+  },
+  {
+    "id": 13,
+  
+    "name": "IoT Conference",
+    "date": "2026-01-20",
+    "category": "Conference",
+    "location": "Singapore",
+      "Image": "assets/images/hthon3.jpg",
+    "description": "A conference exploring the Internet of Things and its applications."
+  },
+  {
+    "id": 14,
+    
+    "name": "Digital Marketing Meetup",
+    "date": "2026-02-05",
+    "category": "Meetup",
+    "location": "Sydney",
+    "Image": "assets/images/h3ckathon.jpg",
+    "description": "A meetup for digital marketers to discuss strategies and trends."
+  },
+  {
+    "id": 15,
+    "name": "AI Ethics Webinar",
+    "date": "2026-02-15",
+    "category": "Webinar",
+    "location": "Online",
+     "Image": "assets/images/firefox.jpg",
+    "description": "A webinar discussing the ethical implications of AI technologies."
+  },
+  {
+    "id": 16,
+    "name": "google webinar",
+    "date": "2026-07-20",
+    "category": "Webinar",
+    "location": "Abu Dhabi",
+     "Image": "assets/images/dld.jpg",
+    "description": "A webinar discussing the Google's latest innovations in AI and cloud computing."
+  },
+  {
+    "id": 17,
+   
+    "name": "2025 Huawei Cloud Conference",
+    "date": "2025-12-02",
+    "category": "Conference",
+    "location": "Online",
+     "Image": "assets/images/techCon.jpg",
+    "description": "A conference hosted by Huawei discussing the future of cloud computing and AI."
+  },
+  {
+    "id": 18,
+    "name": "2026 firefox webinar",
+    "date": "2025-06-04",
+    "category": "Webinar",
+    "location": "Arizona",
+     "Image": "assets/images/firefox.jpg",
+    "description": "A webinar explaining the importance of security using Firefox Browser."
+  },
+  {
+    "id": 19,
+    "name": "2026 microsoft Meetup",
+    "date": "2025-06-10",
+    "category": "Meetup",
+    "location": "Dubai",
+     "Image": "assets/images/microsoft.jpg",
+    "description": "A meetup hosted by Microsoft discussing the latest trends in cloud computing and AI."
+  },
+  {
+    "id": 20,
+    "name": "2026 huawei AI conference",
+    "date": "2025-09-15",
+    "category": "Conference",
+    "location": "Online",
+     "Image": "assets/images/huawei.jpg",
+    "description": "A conference hosted by Google discussing the latest advancements in AI and cloud computing."
+  }
+
+
+]
