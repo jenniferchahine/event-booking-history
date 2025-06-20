@@ -65,7 +65,7 @@ toggleViewBtn.addEventListener("click", () => {
     toggleViewBtn.textContent = "Switch to Card View";
     renderCalendar();
   } 
-  else {
+  else if (currentView === "calendar") {
     currentView = "card";
     calendarSection.classList.add("hidden");
     eventsSection.classList.remove("hidden");
@@ -135,7 +135,7 @@ toggleViewBtn.addEventListener("click", () => {
     const modal = document.getElementById("modalContainer");
     modal.innerHTML = `
       <div class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-        <div class="bg-white dark:bg-gray-800 p-6 rounded-lg w-11/12 max-w-md">
+        <div class="bg-white dark:bg-white-800 p-6 rounded-lg w-11/12 max-w-md">
           <h2 class="text-xl font-bold mb-4">Book now: ${e.name}</h2>
           <input id="name" type="text" placeholder="Your Name" class="w-full p-2 mb-3 border rounded" />
           <input id="email" type="email" placeholder="Your Email" class="w-full p-2 mb-4 border rounded" />
@@ -263,8 +263,8 @@ themeToggle.addEventListener("click", () => {
 
 window.addEventListener("DOMContentLoaded", () => {
   const savedTheme = localStorage.getItem("theme");
-  const prefersDark = savedTheme === "dark" || (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches);
-  setTheme(prefersDark);
+  const preferslight = savedTheme === "light" || (!savedTheme && window.matchMedia("(prefers-color-scheme: light)").matches);
+  setTheme(preferslight);
 });
 const sidebar = document.getElementById("sidebar");
 const peekToggle = document.getElementById("peekToggle");
@@ -279,6 +279,7 @@ peekToggle.addEventListener("click", () => {
   document.body.classList.add("no-scroll");
   peekToggle.classList.add("hidden");
 });
+
 
 
 
@@ -359,7 +360,7 @@ document.getElementById("toggleViewBtn").addEventListener("click", () => {
   const eventsSection = document.getElementById("eventsSection");
   const calendarSection = document.getElementById("calendarSection");
   const toggleViewBtn = document.getElementById("toggleViewBtn");
-if (eventsSection.classList.contains("hidden")) {
+ if (eventsSection.classList.contains("hidden")) {
     eventsSection.classList.remove("hidden");
     calendarSection.classList.add("hidden");
     toggleViewBtn.textContent = "Switch to Calendar View";
@@ -367,7 +368,8 @@ if (eventsSection.classList.contains("hidden")) {
 
     eventsSection.classList.add("hidden");
     calendarSection.classList.remove("hidden");
-    toggleViewBtn.textContent = "Switch to Card View";
+   toggleViewBtn.textContent = "Switch to Calendar View";
+
     renderMonthView();
 
 
@@ -379,15 +381,24 @@ if (eventsSection.classList.contains("hidden")) {
   const tabEvents = document.getElementById("tab-events");
   
   tabUsers.addEventListener("click", () => {
+    eventsSection.classList.add("hidden");
     calendarSection.classList.add("hidden");
+
   });
   tabHistory.addEventListener("click", () => {
+    eventsSection.classList.add("hidden");
     calendarSection.classList.add("hidden");
 
   });
   tabEvents.addEventListener("click", () => {
+    if (calendarSection.classList.contains("hidden")) {
+      toggleViewBtn.textContent = "Switch to Calendar View";
+    }
+    calendarSection.classList.remove("hidden");
+    eventsSection.classList.remove("hidden");
     calendarSection.classList.add("hidden");
   });
+  
 });
 
 
@@ -420,7 +431,7 @@ function renderMonthView() {
   const totalCells = startDay + lastDate;
   for (let i = 0; i < totalCells; i++) {
     const cell = document.createElement("div");
-    cell.className = "border min-h-[80px] p-2 relative bg-white dark:bg-gray-900";
+    cell.className = "border min-h-[80px] p-2 relative bg-black dark:bg-gray-900";
 
     if (i >= startDay) {
       const dayNum = i - startDay + 1;
@@ -443,7 +454,9 @@ function renderMonthView() {
         const cell = [...monthGrid.children].find(div => div.dataset.date === dateStr);
         if (cell) {
           const eventDiv = document.createElement("div");
+          
           eventDiv.className = "calendar-event bg-blue-500 text-white text-xs rounded mt-1 p-1 truncate";
+          eventDiv.setAttribute("data-id", event.id);
           eventDiv.setAttribute("data-tippy-content", `${event.name}\n${event.description}`);
         eventDiv.textContent = event.name; 
 eventDiv.setAttribute("data-full-name", event.name); 
@@ -471,5 +484,17 @@ eventDiv.title = event.name;
     });
 }
 document.addEventListener("DOMContentLoaded", () => {
+  
   renderMonthView();
 });
+
+
+document.addEventListener("click", ({ target }) => {
+  if (target.classList.contains("calendar-event")) {
+    const eventId = target.dataset.id;
+    openBookingModal(+eventId);
+
+  }
+});
+
+
